@@ -21,7 +21,7 @@ class ProjectFactory extends Factory
             'name' => fake()->word(),
             'languages' => fake()->randomElement(['HTML', 'CSS', 'VanillaJS', 'VueJS', 'PHP', 'Laravel', 'SCSS']),
             'collaborators' => fake()->name(),
-            'date_finished' => fake()->time(),
+            'date_finished' => fake()->dateTime(),
         ];
     }
 }

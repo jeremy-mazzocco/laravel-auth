@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name', 128)->unique();
+            $table->string('name', 128);
             $table->string('languages', 64);
             $table->string('collaborators', 64)->nullable();
             $table->dateTime('date_finished')->nullable();
