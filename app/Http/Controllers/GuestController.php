@@ -9,6 +9,9 @@ class GuestController extends Controller
 {
     public function index()
     {
-        return view('guest.index');
+
+        $projects = Project::all();
+
+        return view('guest.index', compact('projects'));
     }
 }

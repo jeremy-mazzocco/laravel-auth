@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GuestController;
+use App\Http\Controllers\LoggedController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [GuestController::class, 'index'])->name('guest.index');
+
+Route::get('/show/{id}', [LoggedController::class, 'index'])->middleware(['auth'])->name('logged.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
